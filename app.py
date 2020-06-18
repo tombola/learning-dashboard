@@ -57,6 +57,18 @@ app.layout = html.Div(
                         "marker": {"color": [COLOURS[c] for c in COLOURS.keys()]},
                     },
                 ],
+                "layout": {
+                    "yaxis": {
+                        "title": {
+                            "text": "Tutorial Stage",
+                            # "standoff": 60,
+                            # "font": {"size": 25},
+                        },
+                        "automargin": True,
+                        # "showline": True,
+                        # "mirror": True,
+                    },
+                },
             },
         ),
     ]
