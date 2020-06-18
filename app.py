@@ -12,20 +12,35 @@ COLOURS = {
     "orange": "#ff9234",
     "yellow": "#ffcd3c",
     "green": "#35d0ba",
+}
+TONES = {
     "pale": "#ddf3f5",
     "dark": "#393e46",
 }
-
-colours = {
-    "background": COLOURS["dark"],
-    "text": COLOURS["pale"],
+PARTICIPANTS_PROGRESS = {
+    "tom": 10,
+    "kevin": 5,
+    "thibaud": 2,
+    "tolu": 15,
 }
+
+
+def get_participant_names():
+    # ["tom", "kevin", "thibaud", "tolu"]
+    return list(PARTICIPANTS_PROGRESS.keys())
+
+
+def get_participant_progress_values():
+    # [10, 5, 2, 15]
+    return [PARTICIPANTS_PROGRESS[n] for n in get_participant_names()]
+
 
 intro = """
 # Cohort dashboard
 
 View indiviual participants progress below.
 """
+
 
 app.layout = html.Div(
     [
@@ -35,8 +50,8 @@ app.layout = html.Div(
             figure={
                 "data": [
                     {
-                        "x": ["tom", "kevin", "thibaud", "tolu"],
-                        "y": [10, 5, 2, 15],
+                        "x": get_participant_names(),
+                        "y": get_participant_progress_values(),
                         "type": "bar",
                         "name": "participants",
                         "marker": {"color": [COLOURS[c] for c in COLOURS.keys()]},
@@ -46,6 +61,7 @@ app.layout = html.Div(
         ),
     ]
 )
+
 
 if __name__ == "__main__":
     app.run_server(debug=True)
