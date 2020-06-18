@@ -2,8 +2,6 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
-
 # Initialise dash app
 app = dash.Dash()
 
@@ -13,10 +11,12 @@ COLOURS = {
     "yellow": "#ffcd3c",
     "green": "#35d0ba",
 }
+
 TONES = {
     "pale": "#ddf3f5",
     "dark": "#393e46",
 }
+
 PARTICIPANTS_PROGRESS = {
     "tom": 10,
     "kevin": 5,
@@ -38,7 +38,7 @@ def get_participant_progress_values():
 intro = """
 # Cohort dashboard
 
-View indiviual participants progress below.
+View individual participants progress below.
 """
 
 
