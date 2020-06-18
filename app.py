@@ -39,6 +39,7 @@ app.layout = html.Div(
                         "y": [10, 5, 2, 15],
                         "type": "bar",
                         "name": "participants",
+                        "marker": {"color": [COLOURS[c] for c in COLOURS.keys()]},
                     },
                 ],
             },
