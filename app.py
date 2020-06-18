@@ -22,21 +22,20 @@ colours = {
 }
 
 app.layout = html.Div(
-    children=[
-        html.H1(children="Cohort dashboard"),
-        html.Div(
-            children="""
-                View individual's progress below.
-            """
-        ),
+    [
+        html.H1("Cohort dashboard"),
+        html.Div("View individual's progress below."),
         dcc.Graph(
             id="cohort-progress",
             figure={
                 "data": [
-                    {"x": [1, 2, 3], "y": [10, 5, 2], "type": "bar", "name": "Tom"},
-                    {"x": [1, 3, 5], "y": [10, 5, 2], "type": "bar", "name": "Kevin"},
-                    {"x": [1, 2, 5], "y": [4, 20, 2], "type": "bar", "name": "Thibaud"},
-                ]
+                    {
+                        "x": ["tom", "kevin", "thibaud", "tolu"],
+                        "y": [10, 5, 2, 15],
+                        "type": "bar",
+                        "name": "participants",
+                    },
+                ],
             },
         ),
     ]
