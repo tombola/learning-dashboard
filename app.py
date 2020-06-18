@@ -21,10 +21,15 @@ colours = {
     "text": COLOURS["pale"],
 }
 
+intro = """
+# Cohort dashboard
+
+View indiviual participants progress below.
+"""
+
 app.layout = html.Div(
     [
-        html.H1("Cohort dashboard"),
-        html.Div("View individual's progress below."),
+        dcc.Markdown(intro),
         dcc.Graph(
             id="cohort-progress",
             figure={
