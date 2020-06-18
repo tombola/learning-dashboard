@@ -5,7 +5,7 @@ import dash_html_components as html
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # Initialise dash app
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash()
 
 COLOURS = {
     'red': '#d92027',
